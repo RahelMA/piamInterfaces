@@ -14,8 +14,7 @@
 #'        You can also use c(TRUE, "additionalunit").
 #' @param absDiff threshold for absolute difference between parent variable and summation
 #' @param relDiff threshold (in percent) for relative difference between parent variable and summation
-#' @importFrom dplyr group_by summarise ungroup left_join mutate %>% filter select bind_rows
-#' @importFrom rlang sym syms .data
+#' @importFrom dplyr group_by summarise ungroup left_join mutate filter select bind_rows
 #' @importFrom quitte as.quitte
 #' @examples
 #' \dontrun{

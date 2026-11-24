@@ -7,7 +7,6 @@
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter distinct
 #' @importFrom piamutils deletePlus
-#' @importFrom rlang .data
 #' @importFrom tibble as_tibble
 #' @return quitte object with adapted mif data
 #' @export

@@ -8,8 +8,7 @@
 #' @param sources model abbreviation(s) used in 'source' column.
 #'        R = REMIND, M = MAgPIE, T = EDGE-T, B = Brick, C = Climate/MAGICC, TRUE = all
 #' @param addunit boolean whether units should be appended as 'Variable (Unit)'
-#' @importFrom dplyr %>% select filter mutate
-#' @importFrom rlang .data
+#' @importFrom dplyr select filter mutate
 #' @importFrom tidyselect any_of
 #' @examples
 #' getMappingVariables("AR6", "RT")

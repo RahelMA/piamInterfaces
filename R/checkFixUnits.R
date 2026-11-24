@@ -11,7 +11,6 @@
 #' @importFrom dplyr filter mutate
 #' @importFrom GDPuc convertSingle
 #' @importFrom piamutils deletePlus niceround
-#' @importFrom rlang .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
 #' @export
