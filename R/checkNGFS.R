@@ -8,7 +8,6 @@
 #' @param generatePlots boolean whether to plot failing summations
 #' @importFrom dplyr filter
 #' @importFrom quitte as.quitte
-#' @importFrom rlang .data
 #' @return quitte object with adapted mif data
 #' @export
 checkNGFS <- function(mifdata, iiasatemplate, logFile, generatePlots = TRUE) {

@@ -20,3 +20,5 @@ tutorial.md
 ^_pkgdown\.yml$
 ^\.positai$
 ^CODE_STYLE\.md$
+^CLAUDE.md$
+^AGENTS.md$

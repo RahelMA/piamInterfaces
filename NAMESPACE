@@ -39,7 +39,6 @@ export(variableInfo)
 export(writeMapping)
 importFrom(GDPuc,convertSingle)
 importFrom(dplyr,
-  "%>%",
   across,
   arrange,
   bind_rows,
@@ -79,6 +78,7 @@ importFrom(magclass,
   mbind,
   unitjoin
 )
+importFrom(magrittr,"%>%")
 importFrom(mip,
   extractVariableGroups,
   plotstyle,
@@ -105,6 +105,8 @@ importFrom(quitte,
 )
 importFrom(readxl,read_excel)
 importFrom(rlang,
+  "!!!",
+  "!!",
   .data,
   sym,
   syms
