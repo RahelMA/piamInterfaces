@@ -11,7 +11,7 @@
 #'  The second can be called 'project_region' or 'RegionCode', to which the first is mapped.
 #'  You can also specify the filename part before the .csv from inst/regionmapping
 #' @param mainReg if regionMapping is specified, additional main region that is kept as is
-#' @importFrom dplyr %>% mutate select right_join left_join
+#' @importFrom dplyr mutate select right_join left_join
 #' @importFrom quitte read.quitte as.quitte
 #' @importFrom piamutils deletePlus
 #' @importFrom stats aggregate

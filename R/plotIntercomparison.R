@@ -20,9 +20,8 @@
 #' @param diffto if specified, the difference to this scenario is calculated and plotted
 #' @param yearsBarPlot years for which bar plots are to be made.
 #' @param postfix to the filename, defaults to something like "_2024-09-05_12.47.28"
-#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>% filter select desc pull bind_rows
+#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange filter select desc pull bind_rows
 #' @importFrom gms chooseFromList
-#' @importFrom rlang sym syms .data
 #' @importFrom quitte as.quitte getModels getRegs getScenarios
 #' @importFrom grDevices pdf dev.off
 #' @importFrom mip plotstyle plotstyle.add showAreaAndBarPlots showLinePlots

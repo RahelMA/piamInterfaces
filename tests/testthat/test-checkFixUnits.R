@@ -1,3 +1,4 @@
+
 for (piam_unit in c("US$2005", "US$2017")) {
   for (mif_unit in c("US$2005", "US$2017")) {
     test_that(paste0("checkFixUnits works with piam_unit=", piam_unit, " and mif_unit=", mif_unit), {
@@ -30,8 +31,10 @@ for (piam_unit in c("US$2005", "US$2017")) {
         expect_error(checkFixUnits(gdp, getMapping(mappingfile)))
       } else if (piam_unit == "US$2017" && mif_unit == "US$2005") {
         # is automatically adapting GDP values
+        convfact <- convertSingle(x = 1, iso3c = "USA", unit_in = "constant 2005 Int$PPP",
+                                  unit_out = "constant 2017 Int$PPP")
         expect_no_error(gdp17 <- checkFixUnits(gdp, getMapping(mappingfile)))
-        expect_true(all(abs(gdp17$value - 1.231357 * gdp$value) < 0.00001))
+        expect_true(all(abs(gdp17$value - convfact * gdp$value) < 0.00001))
         expect_true(all(gdp17$unit == piam_unit))
       } else {
         # no need to adapt anything
@@ -73,8 +76,10 @@ for (piam_unit in c("1/billion US$2005", "1/billion US$2017")) {
         expect_error(checkFixUnits(gdp, getMapping(mappingfile)))
       } else if (piam_unit == "1/billion US$2017" && mif_unit == "1/billion US$2005") {
         # is automatically adapting GDP values
+        convfact <- convertSingle(x = 1, iso3c = "USA", unit_in = "constant 2005 Int$PPP",
+                                  unit_out = "constant 2017 Int$PPP")
         expect_no_error(gdp17 <- checkFixUnits(gdp, getMapping(mappingfile)))
-        expect_true(all(abs(gdp17$value - 1 / 1.231357 * gdp$value) < 0.00001))
+        expect_true(all(abs(gdp17$value - 1 / convfact * gdp$value) < 0.00001))
         expect_true(all(gdp17$unit == piam_unit))
       } else {
         # no need to adapt anything
@@ -116,8 +121,10 @@ for (piam_unit in c("1/US$2005", "1/US$2017")) {
         expect_error(checkFixUnits(gdp, getMapping(mappingfile)))
       } else if (piam_unit == "1/US$2017" && mif_unit == "1/US$2005") {
         # is automatically adapting GDP values
+        convfact <- convertSingle(x = 1, iso3c = "USA", unit_in = "constant 2005 Int$PPP",
+                                  unit_out = "constant 2017 Int$PPP")
         expect_no_error(gdp17 <- checkFixUnits(gdp, getMapping(mappingfile)))
-        expect_true(all(abs(gdp17$value - 1 / 1.231357 * gdp$value) < 0.00001))
+        expect_true(all(abs(gdp17$value - 1 / convfact * gdp$value) < 0.00001))
         expect_true(all(gdp17$unit == piam_unit))
       } else {
         # no need to adapt anything

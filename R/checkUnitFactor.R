@@ -15,7 +15,6 @@
 #'        recommended for submission, not used for checking mapping
 #' @param logFile filename of file for logging
 #' @importFrom dplyr filter
-#' @importFrom rlang sym syms .data
 #' @importFrom stringr str_split
 #' @return quitte object with adapted mif data
 #' @export

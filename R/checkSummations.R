@@ -19,13 +19,12 @@
 #' @param roundDiff should the absolute and relative differences in human-readable summary and dataDumpFile
 #'                  be rounded? The returned object always contains unrounded values.
 #' @param csvSeparator separator for dataDumpFile, defaults to semicolon
-#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange %>%
+#' @importFrom dplyr group_by summarise ungroup left_join mutate arrange
 #'             filter select desc reframe last_col
 #' @importFrom gms chooseFromList
 #' @importFrom grDevices pdf dev.off
 #' @importFrom mip showAreaAndBarPlots extractVariableGroups
 #' @importFrom quitte as.quitte getModels getRegs getScenarios unique_or_levels
-#' @importFrom rlang sym syms
 #' @importFrom stringr str_pad
 #' @importFrom tibble tibble
 #' @importFrom utils write.table

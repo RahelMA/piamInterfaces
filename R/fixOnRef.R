@@ -11,7 +11,7 @@
 #'            "TRUE_or_fixed": TRUE if check was successful, fixed object otherwise
 #' @param failfile csv file to which mismatches are written to
 #' @param relDiff threshold for acceptable relative difference
-#' @importFrom dplyr case_when first group_by summarise ungroup left_join mutate arrange %>%
+#' @importFrom dplyr case_when first group_by summarise ungroup left_join mutate arrange
 #'             filter select desc n
 #' @importFrom quitte as.quitte quitteSort
 #' @importFrom tidyr pivot_wider
